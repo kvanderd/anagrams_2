@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Anagrams 1</h1>
+  <% if @anagrams %>
+    <p>Anagrams for: <%= @word %></p>
+    <% @anagrams.each do |anagram| %>
+      <p><%= anagram.word %></p>
+    <% end %>
+    <a href="/">Get more anagrams</a>
+  <% else %>
+    <%= erb :_anagrams_form %>
+  <% end %>
+</div>
